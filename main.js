@@ -16,7 +16,7 @@ document.getElementById('model-container').appendChild(renderer.domElement);
 const loader = new GLTFLoader();
 let model;
 
-loader.load( '/cactus.glb', function ( gltf ) {
+loader.load( 'cactus.glb', function ( gltf ) {
     
     model = gltf.scene;
     model.scale.set(1, 1, 1);
