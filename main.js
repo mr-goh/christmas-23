@@ -71,3 +71,14 @@ onWindowResize();
 
 
 animate();
+
+document.addEventListener("DOMContentLoaded", function () {
+    const scrollButton = document.getElementById("scroll-button");
+   
+    scrollButton.addEventListener("click", function () {
+        window.scrollTo({
+          top: window.innerHeight, // 100vh
+          behavior: "smooth" // Smooth scrolling animation
+        });
+      });
+    });

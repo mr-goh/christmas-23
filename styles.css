@@ -25,15 +25,32 @@ body {
 	color:#517550;
 }
 
+.button-container {
+	display: flex;
+	position: absolute;
+	align-items: center;
+	justify-content: center;
+	z-index: 100;
+	margin: 88vh 0px;
+	height: 64px;
+	width: 100%;
+}
+
+button {
+	font-family: 'Circular Std', sans-serif;
+	display: block;
+	border: none;
+	background-color: transparent;
+}
+
 #model-container {
 	width: 40%;
 	height: 40%;
 }
 
-
 .letter {
 	position: absolute;
-	margin: 24px 30%;
+	margin: 24px 30% 48px 30%;
 }
 
 @media (max-width: 480px) {
