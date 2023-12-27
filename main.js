@@ -1,5 +1,5 @@
 // import * as THREE from 'three';
-import * as THREE from 'https://github.com/mr-goh/christmas-23/node_modules/three/build/three.module.js';
+import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.148.0/build/three.min.js';
 import { GLTFLoader } from './node_modules/three/addons/loaders/GLTFLoader.js';
 import { OrbitControls } from './node_modules/three/addons/controls/OrbitControls.js';
 
