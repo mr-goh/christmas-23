@@ -1,6 +1,6 @@
-import * as THREE from 'https://github.com/mr-goh/christmas-23/blob/main/node_modules/three/build/three.module.js';
-import { GLTFLoader } from 'https://cdn.jsdelivr.net/npm/three/examples/jsm/loaders/GLTFLoader.js';
-import { OrbitControls } from 'https://cdn.jsdelivr.net/npm/three/examples/jsm/controls/OrbitControls.js';
+import * as THREE from 'https://unpkg.com/browse/three@0.160.0/build/three.module.js';
+import { OrbitControls } from 'https://unpkg.com/browse/three-orbitcontrols@2.110.3/OrbitControls.js';
+import { GLTFLoader } from 'https://unpkg.com/browse/three@0.77.0/examples/js/loaders/gltf/glTFLoader.js';
 
 const scene = new THREE.Scene();
 scene.background = new THREE.Color(0xFAD5A5);
