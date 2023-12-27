@@ -1,6 +1,7 @@
-import * as THREE from 'https://unpkg.com/browse/three@0.160.0/build/three.module.js';
-import { OrbitControls } from 'https://unpkg.com/browse/three-orbitcontrols@2.110.3/OrbitControls.js';
-import { GLTFLoader } from 'https://unpkg.com/browse/three@0.77.0/examples/js/loaders/gltf/glTFLoader.js';
+import * as THREE from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+
 
 const scene = new THREE.Scene();
 scene.background = new THREE.Color(0xFAD5A5);
@@ -15,7 +16,7 @@ document.getElementById('model-container').appendChild(renderer.domElement);
 const loader = new GLTFLoader();
 let model;
 
-loader.load( './public/cactus.glb', function ( gltf ) {
+loader.load( '/cactus.glb', function ( gltf ) {
     
     model = gltf.scene;
     model.scale.set(1, 1, 1);
