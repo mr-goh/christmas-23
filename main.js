@@ -81,3 +81,21 @@ document.addEventListener("DOMContentLoaded", function () {
         });
       });
     });
+
+
+const audioElement = document.getElementById('bg-music');
+const toggleButton = document.getElementById('toggle-music');
+
+function toggleMusic() {
+    if (audioElement.paused) {
+        audioElement.play();
+        toggleButton.textContent = 'Music: ON';
+        toggleButton.style.color = 'green';
+    } else {
+        audioElement.pause();
+        toggleButton.textContent = 'Music: OFF';
+        toggleButton.style.color = 'red';
+    }
+}
+
+toggleButton.addEventListener('click', toggleMusic);

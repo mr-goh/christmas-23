@@ -25,6 +25,17 @@ body {
 	color:#517550;
 }
 
+.music-container {
+	display: flex;
+	position: absolute;
+	align-items: center;
+	justify-content: left;
+	z-index: 100;
+	margin: 16px 16px;
+	height: 24px;
+	width: 100%;
+}
+
 .button-container {
 	display: flex;
 	position: absolute;
