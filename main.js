@@ -8,7 +8,6 @@ const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / (window.inne
 
 const renderer = new THREE.WebGLRenderer({antialias: true});
 renderer.setSize( window.innerWidth, window.innerHeight );
-// document.body.appendChild( renderer.domElement );
 document.getElementById('model-container').appendChild(renderer.domElement);
 
 
@@ -18,7 +17,6 @@ let model;
 loader.load( 'cactus.glb', function ( gltf ) {
     
     model = gltf.scene;
-    model.scale.set(1, 1, 1);
 	scene.add( model );
     model.position.y -= 2
 
@@ -39,8 +37,8 @@ directionalLight.position.set(0, 1, 1);
 scene.add(directionalLight);
 
 const controls = new OrbitControls(camera, renderer.domElement);
-controls.enableDamping = true; // an animation loop is required when either damping or auto-rotation are enabled
-controls.dampingFactor = 0.25; // non-inertia
+controls.enableDamping = true;
+controls.dampingFactor = 0.25;
 controls.screenSpacePanning = false;
 controls.maxPolarAngle = Math.PI / 2;
 
@@ -50,7 +48,6 @@ controls.maxDistance = 12;
 function animate() {
 	requestAnimationFrame( animate );
     if (model) {
-        // Rotate the model around the y-axis
         model.rotation.y += 0.005;
     }
     controls.update();
@@ -64,23 +61,17 @@ function onWindowResize() {
     renderer.setSize(window.innerWidth, window.innerHeight);
 }
 
-window.addEventListener('resize', onWindowResize, false);
+window.addEventListener('resize', onWindowResize);
 
 onWindowResize();
 
 
 animate();
 
-document.addEventListener("DOMContentLoaded", function () {
-    const scrollButton = document.getElementById("scroll-button");
-   
-    scrollButton.addEventListener("click", function () {
-        window.scrollTo({
-          top: window.innerHeight, // 100vh
-          behavior: "smooth" // Smooth scrolling animation
-        });
-      });
-    });
+const scrollButton = document.getElementById("scroll-button");
+scrollButton.addEventListener("click", function () {
+    window.scrollTo({ top: window.innerHeight, behavior: "smooth" });
+});
 
 
 const audioElement = document.getElementById('bg-music');
