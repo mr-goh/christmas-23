@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.DS_Store
+.vscode/
+__MACOSX/
+*.log
+.env
+.env.*
+

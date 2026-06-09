@@ -1,10 +1,10 @@
 {
   "scripts": {
+    "dev": "vite",
     "build": "vite build",
-    "deploy": "gh-pages -d dist"
+    "preview": "vite preview"
   },
   "dependencies": {
-    "save-dev": "^0.0.1-security",
     "three": "^0.159.0"
   },
   "devDependencies": {
